@@ -29,11 +29,13 @@ for(let i = 0; i < 16; i++){
     }
 }
 
-let n = prompt ("Enter the index:");
-let a = 0;
+
 for(let i = 0; i < 16; i++){
-    if( i === n ){
-       a = myArray [i];
+    if( mySecondArray[i] > 4){
+        mySecondArray[i]=[ mySecondArray[i] , mySecondArray[i]-1 , mySecondArray[i]-2];
+    }
+    else{
+        mySecondArray[i]=[ mySecondArray[i] , mySecondArray[i]+1 , mySecondArray[i]+2];
     }
 }
-console.log(a);
+console.log (mySecondArray);
