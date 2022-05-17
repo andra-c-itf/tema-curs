@@ -39,3 +39,10 @@ for(let i = 0; i < 16; i++){
     }
 }
 console.log (mySecondArray);
+
+x = prompt ("Pick a number between 1 and 16");
+for (let i= 0; i < 16; i++){
+    if (i === x ){
+        console.log ( mySecondArray[i] );
+    }
+}
