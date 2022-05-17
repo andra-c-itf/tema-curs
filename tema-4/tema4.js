@@ -7,7 +7,7 @@ let sum = 0;
 for(let i = 0; i < 16; i++){
     sum = sum + myArray[i];
 }
-console.log(sum);
+console.log( "the sum is " + sum );
 
 let count = 0;
 for(let i = 0; i < 16; i++){
@@ -15,7 +15,7 @@ for(let i = 0; i < 16; i++){
         count ++;
     }
 }
-console.log( count );
+console.log( " Number 4 appears for " + count + " times" );
 
 let mySecondArray = [];
 for(let i = 0; i < 16; i++){
