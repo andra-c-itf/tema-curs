@@ -23,12 +23,13 @@ for(let i = 0; i < 16; i++){
 }
 console.log( mySecondArray);
 
-for(let i = 0; i < 16; i++){
-    if( myArray[i] === myArray[i+1] - 1){
-        console.log( myArray[i], myArray [i+1]);
+for (let i = 0; i < 16; i++) {
+    if (myArray[i] === myArray[i + 1] - 1) {
+        console.log(myArray[i], myArray[i + 1]);
     }
 }
 
+let copyOfMySecondArray = mySecondArray.slice();
 
 for(let i = 0; i < 16; i++){
     if( mySecondArray[i] > 4){
@@ -40,9 +41,9 @@ for(let i = 0; i < 16; i++){
 }
 console.log (mySecondArray);
 
-x = prompt ("Pick a number between 1 and 16");
-for (let i= 0; i < 16; i++){
-    if (i === x ){
-        console.log ( mySecondArray[i] );
+let x = prompt ("Pick a number between 1 and 16");
+for (let i = 0; i < 16; i++) {
+    if (i + 1 == x) {
+        console.log(copyOfMySecondArray[i]);
     }
 }
