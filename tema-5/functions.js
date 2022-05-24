@@ -16,20 +16,23 @@ let division = function (a,b){
 }
 
 let x = prompt ('Please pick a number:')
+x = parseInt(x);
 // 4 / x + 5 - x * (34 - x + 10) / 6 + x
 console. log (sum( subtract(sum ( division( 4, x), 5), division( multiplication (x, sum ( subtract ( 34, x ), 10)), 6)), x));
 
 
 let checkPalin = function (palin){
-    for ( let i= 0; i < palin.length; i++){
-        if ( palin.charAt (i) === palin.charAt(palin.length)){
-            return 'This is a palindrome';
+    let isPalindrome = true;
+    for (let i = 0; i < palin.length; i++) {
+        if (palin.charAt(i) !== palin.charAt(palin.length - 1 - i)) {
+            isPalindrome = false;
         }
-        else {
-            return 'This is not a palindrome';
-        }
-    } 
-    palin.length --;
+    }
+    if (isPalindrome) {
+        return 'the number is a palindrome';
+    } else {
+        return 'the number is NOT a palindrome';
+    }
 }
 palin= prompt();
 console.log(checkPalin(palin));
@@ -72,8 +75,9 @@ let factorial = function (n) {
         if (n>0 && Math.ceil(n) === Math.floor(n)){
             for (let i=1; i<=n; i++){
                 fact= fact*i;
-                return fact;
+                
             }
+            return fact;
         }
     }
 }
