@@ -21,23 +21,23 @@ console. log (sum( subtract(sum ( division( 4, x), 5), division( multiplication 
 
 
 let checkPalin = function (palin){
-    let palinLenght = palin.lenght;
-    for ( let i= 0; i < palinLenght/2; i++){
-        for ( let j= palinLenght; j > palinLenght/2 -1 ; j-- ){
-            if ( palin.charAt (i) === palin.charAt(j)){
-                console.log ('This is a palindrome');
-            }
+    for ( let i= 0; i < palin.length; i++){
+        if ( palin.charAt (i) === palin.charAt(palin.length)){
+            return 'This is a palindrome';
         }
-    }
+        else {
+            return 'This is not a palindrome';
+        }
+    } 
+    palin.length --;
 }
-
-let palin = prompt ('Write a number or a word and see if it if a palindrome');
-checkPalin(palin);
+palin= prompt();
+console.log(checkPalin(palin));
 
 let longestWord = function (str){
     let strWords = str.split(' ');
     let longestWord = 0;
-    for(var i = 0; i < strWords.length; i++){
+    for(let i = 0; i < strWords.length; i++){
         if(strWords[i].length > longestWord){
             longestWord = strWords[i].length;
      }
@@ -49,23 +49,32 @@ let str = prompt('Write a sentance');
 console.log ( longestWord ( str));
 
 let allFunctions= {
-    sum1: sum(),
-    sub: subtract(),
-    multiply: multiplication(),
-    div: division()
-   // palindrome: checkPalin(),
-    //longestLenght: longestWord()
+   sum: function sum(a, b){
+       return a+b;
+   },
+    sub: function subtract(a,b){
+        return a-b;
+    },
+    multiply: function multiplication(a, b){
+        return a*b;
+    },
+    div: function division(a, b){
+        return a/b;
+    }
 };
-let test = allFunctions.sum1(4,7);
-console.log('the sum is ' + test);
 
 let factorial = function (n) {
     let fact = 1;
-    if (n>0 && Math.ceil(n) === Math.floor(n)){
-        for (let i=1; i<=n; i++){
-            fact= fact*i;
+    if (n === 1 || n === 0){
+        return 1;
+    }
+    else{
+        if (n>0 && Math.ceil(n) === Math.floor(n)){
+            for (let i=1; i<=n; i++){
+                fact= fact*i;
+                return fact;
+            }
         }
-        return fact;
     }
 }
 
