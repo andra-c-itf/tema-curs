@@ -1,8 +1,13 @@
-let onClickedDiv = function(){
+let onClickedDiv = function() {
     let clickedDiv = document.querySelector('.divDimensions');
-    clickedDiv.style.bottom = '0';
-    clickedDiv.style.right = '0';
-    clickedDiv.style.margin = '0px 50px 50px 0px'
+    
+    if (clickedDiv.classList.contains('divFirstPosition')) {
+        clickedDiv.classList.remove('divFirstPosition');
+        clickedDiv.classList.add('divSecondPosition');
+    } else {
+        clickedDiv.classList.add('divFirstPosition');
+        clickedDiv.classList.remove('divSecondPosition');
+    }
 }
 
 let myDiv = document.querySelector('.divDimensions');
