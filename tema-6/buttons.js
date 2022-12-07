@@ -50,7 +50,7 @@ Step5.addEventListener("click", function () {
     alert("You have reached the end, there are no more buttons!");
 });
 
-/*let n = prompt('Write the number of buttons you want: ')
+let n = prompt('Write the number of buttons you want: ')
 n = parseInt(n);
 let buttons = [];
 buttons.length = n;
@@ -76,11 +76,3 @@ for (let i = 1; i <= n; i++) {
             }
     }
 }
-*/
-
-let createAnotherButton = function(name, action) {
-    let button = document.createElement('button');
-    button.innerHTML = name;
-    button.addEventListener('click', action);
-    return button;
-};
