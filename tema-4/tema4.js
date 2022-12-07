@@ -7,7 +7,7 @@ let sum = 0;
 for(let i = 0; i < 16; i++){
     sum = sum + myArray[i];
 }
-console.log( "the sum is " + sum );
+console.log( "The sum of the elements is " + sum );
 
 let count = 0;
 for(let i = 0; i < 16; i++){
@@ -15,17 +15,18 @@ for(let i = 0; i < 16; i++){
         count ++;
     }
 }
-console.log( " Number 4 appears for " + count + " times" );
+console.log( "Number 4 appears for " + count + " times" );
 
-let mySecondArray = [];
+let mySecondArray = [1, 9, 4, 2, 8, 4, 7, 2, 1, 5, 4, 4, 3, 3, 8, 9];
 for(let i = 0; i < 16; i++){
     mySecondArray[i] = myArray[i] - 1;
 }
-console.log( mySecondArray);
+console.log ("The second array is ");
+console.log (mySecondArray);
 
-for (let i = 0; i < 16; i++) {
-    if (myArray[i] === myArray[i + 1] - 1) {
-        console.log(myArray[i], myArray[i + 1]);
+for( let i = 0; i < 16; i++){
+    if( myArray[i] === myArray [i+1]){
+        console.log ("The numer " + myArray[i] + " appears consecutive on positions " + i , i+1);
     }
 }
 
@@ -39,11 +40,6 @@ for(let i = 0; i < 16; i++){
         mySecondArray[i]=[ mySecondArray[i] , mySecondArray[i]+1 , mySecondArray[i]+2];
     }
 }
-console.log (mySecondArray);
+console.log ("I modified the string 'mySecondArray' so that each element in this string is, in turn, a string of 3 elements. If the number of an element in the string was less than or equal to 4, then the new element will contain a string that starts from the initial number and increases by 1. If the number of an element in the string was greater than 4, then the new string starts from to the initial number and decreases by 1.");
+console.log(mySecondArray);
 
-let x = prompt ("Pick a number between 1 and 16");
-for (let i = 0; i < 16; i++) {
-    if (i + 1 == x) {
-        console.log(copyOfMySecondArray[i]);
-    }
-}
