@@ -18,7 +18,7 @@ let crew= {
     },
 
     tableCreate: function(){
-        let table = document.querySelector('.table');
+        let table = document.querySelector('.table tbody');
         for( let i=0; i < crew.data.crewMembers.length; i++){
             let tr= document.createElement('tr');
 
