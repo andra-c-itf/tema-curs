@@ -13,5 +13,3 @@ Hi there ✋!
 ## Projects
 <div> The projects in the course started with very easy projects, such as using links and images, to more complex things. I worked with flexbox, Bootstrap, APIs.
 </div>
-
-<img src ='photos/1.png' alt = "First project" width = 50%/>
